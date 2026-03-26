@@ -1,0 +1,67 @@
+.list {
+  display: inline-flex;
+  gap: var(--space-1);
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: var(--radius-3);
+  background: rgba(0, 212, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  padding: var(--space-1);
+  color: var(--color-neutral-11);
+  flex-wrap: wrap;
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  gap: var(--space-2);
+  transition: all 0.2s ease;
+  padding: var(--space-2) var(--space-4);
+  background: transparent;
+  color: var(--color-neutral-10);
+  border-radius: var(--radius-2);
+  font-size: var(--font-size-2);
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.trigger:hover {
+  background: rgba(0, 212, 255, 0.08);
+  color: var(--color-neutral-12);
+}
+
+.trigger:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-accent-7);
+}
+
+.trigger:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.trigger[data-state="active"] {
+  background: var(--gradient-primary);
+  color: var(--color-neutral-1);
+  box-shadow: 0 2px 8px rgba(0, 212, 255, 0.3);
+}
+
+.trigger[data-state="active"]:hover {
+  box-shadow: var(--shadow-glow-cyan);
+}
+
+.trigger svg {
+  width: 16px;
+  height: 16px;
+}
+
+.content {
+  margin-top: var(--space-4);
+}
+
+.content:focus-visible {
+  outline: none;
+}

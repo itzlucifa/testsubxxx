@@ -1,0 +1,275 @@
+.container {
+  padding: 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-6);
+  gap: var(--space-4);
+}
+
+.backButton {
+  margin-bottom: var(--space-3);
+  gap: var(--space-2);
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  color: var(--color-neutral-11);
+}
+
+.backButton:hover {
+  background: rgba(0, 212, 255, 0.08);
+  border-color: var(--color-accent-7);
+  color: var(--color-accent-9);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 var(--space-2) 0;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--color-neutral-9);
+  margin: 0;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.statCard {
+  background: var(--gradient-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-4);
+  padding: var(--space-5);
+  transition: all 0.3s ease;
+}
+
+.statCard:hover {
+  border-color: var(--color-accent-6);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.statTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  color: var(--color-neutral-9);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.statValue {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-top: var(--space-2);
+}
+
+.searchContainer {
+  margin-bottom: var(--space-6);
+}
+
+.searchBox {
+  position: relative;
+  max-width: 500px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-neutral-8);
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  padding: var(--space-3) var(--space-3) var(--space-3) var(--space-8);
+  background: var(--color-neutral-3);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-3);
+  font-size: 14px;
+  color: var(--color-neutral-12);
+  transition: all 0.2s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--color-accent-9);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.15);
+}
+
+.searchInput::placeholder {
+  color: var(--color-neutral-8);
+}
+
+.tabs {
+  margin-top: var(--space-4);
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.assetCard {
+  background: var(--gradient-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-4);
+  padding: var(--space-5);
+  transition: all 0.3s ease;
+}
+
+.assetCard:hover {
+  border-color: var(--color-accent-6);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-neutral-12);
+}
+
+.cardTitle svg {
+  color: var(--color-accent-9);
+}
+
+.badges {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.metrics {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background: var(--color-neutral-3);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-3);
+  margin-top: var(--space-3);
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.metricLabel {
+  color: var(--color-neutral-9);
+}
+
+.metricValue {
+  font-weight: 600;
+  color: var(--color-neutral-11);
+  font-family: var(--font-code);
+}
+
+.scanButton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--gradient-primary);
+  color: var(--color-neutral-1);
+  border: none;
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-3);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scanButton:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow-cyan);
+}
+
+.scanButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spinning {
+  animation: spin 1s linear infinite;
+}
+
+.emptyState {
+  text-align: center;
+  padding: var(--space-9);
+  background: var(--gradient-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-4);
+}
+
+.emptyIcon {
+  color: var(--color-accent-9);
+  opacity: 0.6;
+  margin-bottom: var(--space-4);
+}
+
+.emptyTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-neutral-12);
+  margin: 0 0 var(--space-2) 0;
+}
+
+.emptyText {
+  font-size: 0.9375rem;
+  color: var(--color-neutral-9);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

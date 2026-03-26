@@ -1,0 +1,65 @@
+.root {
+  --switch-height: 22px;
+  --switch-width: calc(var(--switch-height) * 1.8);
+  position: relative;
+  width: var(--switch-width);
+  height: var(--switch-height);
+  cursor: pointer;
+  border-radius: var(--radius-round);
+  padding: 0;
+  transition: all 0.2s ease;
+  border: 1px solid var(--glass-border);
+}
+
+.root:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-accent-7);
+}
+
+.root[data-state="checked"] {
+  background: var(--gradient-primary);
+  border-color: transparent;
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.3);
+}
+
+.root[data-state="checked"]:hover {
+  box-shadow: var(--shadow-glow-cyan);
+}
+
+.root[data-state="unchecked"] {
+  background: rgba(100, 120, 140, 0.2);
+}
+
+.root[data-state="unchecked"]:hover {
+  background: rgba(100, 120, 140, 0.3);
+  border-color: var(--color-accent-7);
+}
+
+.root:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.root:disabled:hover {
+  box-shadow: none;
+}
+
+.thumb {
+  --switch-thumb-inset: 2px;
+  --switch-thumb-size: calc(var(--switch-height) - var(--switch-thumb-inset) * 2 - 2px);
+  --switch-thumb-translate-x: calc(var(--switch-width) - var(--switch-height));
+  position: absolute;
+  left: var(--switch-thumb-inset);
+  top: var(--switch-thumb-inset);
+  height: var(--switch-thumb-size);
+  width: var(--switch-thumb-size);
+  border-radius: var(--radius-round);
+  background: var(--color-neutral-12);
+  box-shadow: var(--shadow-2);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.thumb[data-state="checked"] {
+  transform: translateX(var(--switch-thumb-translate-x));
+  background: white;
+}

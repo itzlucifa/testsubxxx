@@ -1,0 +1,45 @@
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(0, 150, 180, 0.04) 100%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-3);
+  color: var(--color-neutral-11);
+  font-size: var(--font-size-2);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: var(--space-4);
+}
+
+.backButton:hover {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.15) 0%, rgba(0, 150, 180, 0.08) 100%);
+  border-color: var(--color-accent-7);
+  color: var(--color-accent-9);
+  transform: translateX(-2px);
+}
+
+.backButton:active {
+  transform: translateX(0);
+}
+
+.backButton svg {
+  transition: transform 0.2s ease;
+}
+
+.backButton:hover svg {
+  transform: translateX(-2px);
+}
+
+.label {
+  display: inline;
+}
+
+@media (max-width: 480px) {
+  .backButton {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-1);
+  }
+}

@@ -1,0 +1,131 @@
+.base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: var(--space-2);
+  white-space: nowrap;
+  border-radius: var(--radius-2);
+  font-size: var(--font-size-2);
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.base:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-accent-7);
+}
+
+.base:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.base svg {
+  pointer-events: none;
+  width: 16px;
+  aspect-ratio: 1;
+  margin-inline-start: -2px;
+}
+
+.default {
+  background: var(--gradient-primary);
+  color: var(--color-neutral-1);
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 212, 255, 0.2);
+}
+
+.default:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-glow-cyan);
+}
+
+.default:focus {
+  box-shadow: 0 0 0 2px var(--color-accent-7);
+}
+
+.default:active {
+  transform: translateY(0);
+}
+
+.destructive {
+  background: linear-gradient(135deg, #ff4444 0%, #cc0000 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 2px 8px rgba(255, 68, 68, 0.2);
+}
+
+.destructive:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(255, 68, 68, 0.4);
+}
+
+.outline {
+  border: 1px solid var(--glass-border);
+  background: transparent;
+  color: var(--color-neutral-11);
+}
+
+.outline:hover {
+  border-color: var(--color-accent-7);
+  background: rgba(0, 212, 255, 0.08);
+  color: var(--color-accent-9);
+}
+
+.secondary {
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--color-accent-11);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+}
+
+.secondary:hover {
+  background: rgba(0, 212, 255, 0.15);
+  border-color: rgba(0, 212, 255, 0.3);
+}
+
+.ghost {
+  background: transparent;
+  color: var(--color-neutral-11);
+  border: none;
+}
+
+.ghost:hover {
+  background: rgba(0, 212, 255, 0.08);
+  color: var(--color-accent-9);
+}
+
+.link {
+  background: transparent;
+  color: var(--color-accent-11);
+  text-underline-offset: var(--space-1);
+  border: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+  color: var(--color-accent-9);
+}
+
+.sizeDefault {
+  padding: var(--space-2) var(--space-4);
+  height: 36px;
+}
+
+.sizeSm {
+  padding: var(--space-1) var(--space-3);
+  height: 28px;
+  font-size: var(--font-size-1);
+  border-radius: var(--radius-2);
+}
+
+.sizeLg {
+  padding: var(--space-3) var(--space-6);
+  height: 44px;
+  border-radius: var(--radius-2);
+}
+
+.sizeIcon {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+}

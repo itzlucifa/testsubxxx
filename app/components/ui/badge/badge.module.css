@@ -1,0 +1,67 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  border-radius: var(--radius-round);
+  border: 1px solid;
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--font-size-1);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.badge:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-accent-7);
+}
+
+.badge svg {
+  width: 14px;
+  height: 14px;
+}
+
+.default {
+  border-color: transparent;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.2) 0%, rgba(0, 180, 200, 0.15) 100%);
+  color: var(--color-accent-11);
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.15);
+}
+
+.default:hover {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.3) 0%, rgba(0, 180, 200, 0.25) 100%);
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.25);
+}
+
+.secondary {
+  border-color: transparent;
+  background: rgba(100, 120, 140, 0.2);
+  color: var(--color-neutral-11);
+}
+
+.secondary:hover {
+  background: rgba(100, 120, 140, 0.3);
+  color: var(--color-neutral-12);
+}
+
+.destructive {
+  border-color: transparent;
+  background: linear-gradient(135deg, rgba(255, 68, 68, 0.2) 0%, rgba(200, 50, 50, 0.15) 100%);
+  color: var(--color-error-11);
+  box-shadow: 0 0 8px rgba(255, 68, 68, 0.15);
+}
+
+.destructive:hover {
+  background: linear-gradient(135deg, rgba(255, 68, 68, 0.3) 0%, rgba(200, 50, 50, 0.25) 100%);
+  box-shadow: 0 0 12px rgba(255, 68, 68, 0.25);
+}
+
+.outline {
+  border-color: var(--glass-border);
+  background: transparent;
+  color: var(--color-neutral-11);
+}
+
+.outline:hover {
+  border-color: var(--color-accent-7);
+  background: rgba(0, 212, 255, 0.05);
+}

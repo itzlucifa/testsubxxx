@@ -1,0 +1,203 @@
+.container {
+  padding: var(--space-6);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-6);
+}
+
+.backButton {
+  margin-bottom: var(--space-3);
+  gap: var(--space-2);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-neutral-12);
+  margin: 0 0 var(--space-2);
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--color-neutral-11);
+  margin: 0;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.statTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-neutral-11);
+}
+
+.statValue {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-neutral-12);
+}
+
+.statSubtext {
+  font-size: 0.875rem;
+  color: var(--color-neutral-11);
+  margin-top: var(--space-2);
+}
+
+.openIcon {
+  color: var(--color-error-9);
+}
+
+.patchingIcon {
+  color: #f59e0b;
+}
+
+.patchedIcon {
+  color: var(--color-success-9);
+}
+
+.vulnList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.vulnCard {
+  padding: var(--space-5);
+  background: var(--color-neutral-2);
+  border-radius: var(--radius-3);
+  border: 1px solid var(--color-neutral-5);
+}
+
+.vulnHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-3);
+  gap: var(--space-4);
+}
+
+.vulnMeta {
+  flex: 1;
+}
+
+.vulnTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-neutral-12);
+  margin: 0 0 var(--space-2);
+}
+
+.vulnId {
+  font-size: 0.875rem;
+  font-family: var(--font-code);
+  color: var(--color-accent-9);
+  font-weight: 600;
+}
+
+.vulnBadges {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.vulnDescription {
+  font-size: 0.9375rem;
+  color: var(--color-neutral-11);
+  margin-bottom: var(--space-4);
+  line-height: 1.6;
+}
+
+.vulnMetrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin-bottom: var(--space-4);
+  padding: var(--space-4);
+  background: var(--color-neutral-1);
+  border-radius: var(--radius-2);
+}
+
+.cvssScore {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.cvssLabel {
+  font-size: 0.875rem;
+  color: var(--color-neutral-11);
+  font-weight: 600;
+}
+
+.cvssValue {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.cvssProgress {
+  height: 8px;
+}
+
+.vulnDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.detailItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+}
+
+.detailLabel {
+  color: var(--color-neutral-11);
+  font-weight: 500;
+}
+
+.affectedDevices {
+  margin-bottom: var(--space-4);
+}
+
+.devicesLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-neutral-11);
+  margin-bottom: var(--space-2);
+}
+
+.devicesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.vulnActions {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .vulnMetrics {
+    grid-template-columns: 1fr;
+  }
+
+  .vulnHeader {
+    flex-direction: column;
+  }
+}
